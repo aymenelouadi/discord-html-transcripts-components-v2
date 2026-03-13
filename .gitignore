@@ -5,8 +5,7 @@ dist/
 .vscode/
 .idea/
 
-# ── Lock files (use package.json as source of truth) ────
-package-lock.json
+# ── Lock files ──────────────────────────────────────────
 yarn.lock
 
 # ── pnpm workspace (not needed outside monorepo) ────────
