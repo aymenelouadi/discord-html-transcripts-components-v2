@@ -19,7 +19,7 @@ import { RenderType } from './content';
 import type { RenderMessageContext } from '..';
 import { ButtonStyleMapping } from './components/styles';
 
-export default function ComponentRow({
+export default async function ComponentRow({
   component,
   id,
   context,
@@ -111,7 +111,7 @@ export default function ComponentRow({
   }
 }
 
-export function Component({
+export async function Component({
   component,
   id,
 }: {
