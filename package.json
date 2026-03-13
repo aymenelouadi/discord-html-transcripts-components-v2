@@ -1,6 +1,6 @@
 {
   "name": "discord-transcript-v2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The only Discord transcript library with full Components V2 support. Generate pixel-perfect HTML transcripts from any Discord channel.",
   "main": "dist/index.js",
   "homepage": "https://github.com/aymenelouadi/discord-html-transcripts-components-v2#readme",
@@ -79,6 +79,7 @@
     "@derockdev/discord-components-core": "^3.6.1",
     "@derockdev/discord-components-react": "^3.6.1",
     "discord-markdown-parser": "~1.2.0",
+    "discord-transcript-v2": "^1.0.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "simple-markdown": "^0.7.3",
@@ -86,7 +87,7 @@
     "undici": "^7.15.0"
   },
   "peerDependencies": {
-    "discord.js": "^14.0.0 || ^15.0.0"
+    "discord.js": "^14.0.0"
   },
   "overrides": {
     "react": "$react",
