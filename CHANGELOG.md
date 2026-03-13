@@ -89,12 +89,4 @@ Extended `discord-markdown-parser` AST support:
 
 ---
 
-### 🗑️ Removed
-
-- Removed original Apache-2.0 license headers
-- Removed all `@ItzDerock` branding and funding links
-- Removed `docs/` GitBook documentation (replaced by this README)
-
----
-
 [1.0.0]: https://github.com/aymenelouadi/discord-html-transcripts-components-v2/releases/tag/v1.0.0
