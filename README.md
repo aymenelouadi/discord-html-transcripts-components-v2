@@ -121,5 +121,5 @@ pnpm build
 
 ## License
 
-Apache-2.0 © [aymenelouadi](https://github.com/aymenelouadi)
+MIT © [aymenelouadi](https://github.com/aymenelouadi)
 

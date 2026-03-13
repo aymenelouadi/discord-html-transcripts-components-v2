@@ -11,6 +11,7 @@
     "prepack": "npm run build",
     "test:typescript": "ts-node ./tests/generate.ts",
     "test:send-components-v2": "ts-node ./tests/components-v2-send.ts",
+    "demo": "ts-node ./tests/demo-components-v2.ts",
     "lint": "prettier --write --cache . && eslint --cache --fix .",
     "typecheck": "tsc -p tsconfig.eslint.json"
   },
@@ -29,7 +30,7 @@
     "components-v2"
   ],
   "author": "aymenelouadi",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "files": [
     "dist/**/*.js",
     "dist/**/*.d.ts",

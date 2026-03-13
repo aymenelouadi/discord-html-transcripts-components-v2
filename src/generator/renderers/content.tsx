@@ -229,6 +229,42 @@ export async function MessageSingleASTNode({ node, context }: { node: SingleASTN
     case 'timestamp':
       return <DiscordTime timestamp={parseInt(node.timestamp) * 1000} format={node.format} />;
 
+    case 'heading': {
+      const level = (node.level as number) ?? 3;
+      const headingStyles: Record<number, React.CSSProperties> = {
+        1: { fontSize: '20px', fontWeight: 700, margin: '6px 0 4px', color: '#f2f3f5', lineHeight: 1.3 },
+        2: { fontSize: '17px', fontWeight: 700, margin: '5px 0 3px', color: '#f2f3f5', lineHeight: 1.3 },
+        3: { fontSize: '15px', fontWeight: 700, margin: '4px 0 2px', color: '#f2f3f5', lineHeight: 1.3 },
+      };
+      const style = headingStyles[level] ?? headingStyles[3];
+      return (
+        <div style={style}>
+          <MessageASTNodes nodes={node.content} context={context} />
+        </div>
+      );
+    }
+
+    case 'list':
+      return (
+        node.ordered ? (
+          <ol style={{ paddingLeft: '24px', margin: '4px 0' }}>
+            {(node.items as ASTNode[]).map((item, i) => (
+              <li key={i} style={{ margin: '2px 0' }}>
+                <MessageASTNodes nodes={item} context={context} />
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <ul style={{ paddingLeft: '24px', margin: '4px 0', listStyleType: 'disc' }}>
+            {(node.items as ASTNode[]).map((item, i) => (
+              <li key={i} style={{ margin: '2px 0' }}>
+                <MessageASTNodes nodes={item} context={context} />
+              </li>
+            ))}
+          </ul>
+        )
+      );
+
     default: {
       console.log(`Unknown node type: ${type}`, node);
       return typeof node.content === 'string' ? (
