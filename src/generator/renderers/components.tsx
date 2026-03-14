@@ -1,4 +1,4 @@
-import { DiscordActionRow, DiscordAttachment, DiscordSpoiler } from '@derockdev/discord-components-react';
+import { DiscordAttachment, DiscordSpoiler } from '@derockdev/discord-components-react';
 import {
   ComponentType,
   type ThumbnailComponent,
@@ -31,13 +31,11 @@ export default function ComponentRow({
   switch (component.type) {
     case ComponentType.ActionRow:
       return (
-        <DiscordActionRow key={id}>
-          <>
-            {component.components.map((nestedComponent, idx) => (
-              <Component component={nestedComponent} id={idx} key={idx} />
-            ))}
-          </>
-        </DiscordActionRow>
+        <div className="discord-action-row-wrap" key={id}>
+          {component.components.map((nestedComponent, idx) => (
+            <Component component={nestedComponent} id={idx} key={idx} />
+          ))}
+        </div>
       );
 
     case ComponentType.Container: {
