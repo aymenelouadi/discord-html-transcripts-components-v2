@@ -36,7 +36,8 @@
 | 🗂️ **Self-contained** | Single `.html` file — no external runtime dependencies after generation |
 | ⚡ **React 19 SSR** | Powered by `prerenderToNodeStream` for fast, memory-efficient rendering |
 | 📝 **Markdown** | Headings · Lists · Bold/Italic · Code blocks · Blockquotes · Spoilers · Timestamps |
-| 🔧 **TypeScript** | Fully typed public API |
+| � **User Mentions** | Mentions resolve to real display names; click any mention for a Discord-style profile popup |
+| �🔧 **TypeScript** | Fully typed public API |
 
 ---
 
