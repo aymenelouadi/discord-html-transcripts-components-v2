@@ -29,13 +29,13 @@ export const ButtonStyleMapping = {
 } as const;
 
 export const globalStyles = `
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-     Discord HTML Transcripts â€” Components V2 Styles
+  /* ---------------------------------------------------------
+     Discord HTML Transcripts - Components V2 Styles
      Redesigned by aymenelouadi
      https://github.com/aymenelouadi/discord-html-transcripts-components-v2
-  â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  --------------------------------------------------------- */
 
-  /* â”€â”€ V2 Container â”€â”€ */
+  /* -- V2 Container -- */
   .dcv2-container {
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ export const globalStyles = `
     width: 100%;
   }
 
-  /* â”€â”€ V2 Section â”€â”€ */
+  /* -- V2 Section -- */
   .dcv2-section {
     display: flex;
     flex-direction: row;
@@ -108,7 +108,7 @@ export const globalStyles = `
     justify-content: center;
   }
 
-  /* â”€â”€ V2 Separator â”€â”€ */
+  /* -- V2 Separator -- */
   .dcv2-separator {
     display: block;
     width: 100%;
@@ -131,7 +131,7 @@ export const globalStyles = `
     padding: 10px 0;
   }
 
-  /* â”€â”€ V2 Media Gallery â”€â”€ */
+  /* -- V2 Media Gallery -- */
   .dcv2-media-gallery {
     display: grid;
     gap: 3px;
@@ -179,7 +179,7 @@ export const globalStyles = `
     letter-spacing: -0.5px;
   }
 
-  /* â”€â”€ V2 Thumbnail â”€â”€ */
+  /* -- V2 Thumbnail -- */
   .dcv2-thumbnail {
     width: 84px;
     height: 84px;
@@ -203,7 +203,7 @@ export const globalStyles = `
     display: block;
   }
 
-  /* â”€â”€ V2 Text Display â”€â”€ */
+  /* -- V2 Text Display -- */
   .dcv2-text-display {
     color: #dde1e6;
     font-size: 14px;
@@ -212,7 +212,7 @@ export const globalStyles = `
     letter-spacing: 0.01em;
   }
 
-  /* â”€â”€ Buttons â”€â”€ */
+  /* -- Buttons -- */
   .discord-button {
     color: #ffffff !important;
     padding: 3px 16px;
@@ -312,7 +312,7 @@ export const globalStyles = `
     box-shadow: 0 2px 12px rgba(197,89,222,0.35);
   }
 
-  /* â”€â”€ Action Row â”€â”€ */
+  /* -- Action Row -- */
   .discord-action-row-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -321,7 +321,7 @@ export const globalStyles = `
     align-items: center;
   }
 
-  /* â”€â”€ Select Menu â”€â”€ */
+  /* -- Select Menu -- */
   .discord-select-menu {
     position: relative;
     width: 100%;
@@ -416,7 +416,7 @@ export const globalStyles = `
     letter-spacing: 0.01em;
   }
 
-  /* â”€â”€ V2 File Attachment â”€â”€ */
+  /* -- V2 File Attachment -- */
   .dcv2-file {
     display: flex;
     align-items: center;
