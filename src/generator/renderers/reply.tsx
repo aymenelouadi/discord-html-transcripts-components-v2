@@ -6,7 +6,7 @@ import MessageContent, { RenderType } from './content';
 
 export default function MessageReply({ message, context }: { message: Message; context: RenderMessageContext }) {
   if (!message.reference) return null;
-  if (message.reference.guildId !== message.guild?.id) return null;
+  if ((message.reference.guildId ?? null) !== (message.guild?.id ?? null)) return null;
 
   const referencedMessage = context.messages.find((m) => m.id === message.reference!.messageId);
 

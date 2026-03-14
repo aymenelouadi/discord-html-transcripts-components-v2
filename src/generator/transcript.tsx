@@ -46,9 +46,20 @@ export default function DiscordMessages({ messages, channel, callbacks, ...optio
         )}
       </DiscordHeader>
       {/* body */}
-      {messages.map((message) => (
-        <DiscordMessage message={message} context={{ messages, channel, callbacks, ...options }} key={message.id} />
-      ))}
+      {messages.map((message) => {
+        try {
+          return (
+            <DiscordMessage
+              message={message}
+              context={{ messages, channel, callbacks, ...options }}
+              key={message.id}
+            />
+          );
+        } catch (err) {
+          console.error(`[discord-html-transcripts] Failed to render message ${message.id}:`, err);
+          return null;
+        }
+      })}
       {/* footer */}
       <div className="transcript-footer">
         <div className="transcript-footer-stats">

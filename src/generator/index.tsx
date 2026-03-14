@@ -130,7 +130,9 @@ export default async function render({ messages, channel, callbacks, ...options 
     preFetchEntities(messages, callbacks, options.saveImages),
   ]);
 
-  const markup = renderToStaticMarkup(
+  let markup: string;
+  try {
+    markup = renderToStaticMarkup(
     <html>
       <head>
         <meta charSet="utf-8" />
@@ -302,7 +304,15 @@ export default async function render({ messages, channel, callbacks, ...options 
       {/* Make sure the script runs after the DOM has loaded */}
       {options.hydrate && <script dangerouslySetInnerHTML={{ __html: revealSpoiler }}></script>}
     </html>
-  );
+    );
+  } catch (renderError) {
+    const isDM = channel.isDMBased();
+    console.error(
+      `[discord-html-transcripts] renderToStaticMarkup failed for ${isDM ? 'DM' : 'guild'} channel ${channel.id}:`,
+      renderError
+    );
+    throw renderError;
+  }
 
   if (options.hydrate) {
     const result = await renderToString(markup, {
