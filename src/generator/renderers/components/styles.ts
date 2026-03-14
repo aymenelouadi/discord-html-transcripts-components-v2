@@ -1,4 +1,4 @@
-﻿import type { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { ButtonStyle } from 'discord.js';
 
 // Container styles
@@ -470,13 +470,13 @@ export const globalStyles = `
     font-family: 'Inter', Whitney, sans-serif;
   }
 
-  /* ── User Mention ── */
+  /* -- User Mention -- */
   .dc-user-mention {
     display: inline;
     cursor: pointer;
   }
 
-  /* ── Profile Popup Card ── */
+  /* -- Profile Popup Card -- */
   .dc-profile-card {
     position: absolute;
     z-index: 9999;

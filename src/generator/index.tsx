@@ -49,7 +49,7 @@ export type RenderMessageContext = {
   hydrate: boolean;
 };
 
-// ── Pre-fetch helpers ───────────────────────────────────────────────────────
+// -- Pre-fetch helpers -------------------------------------------------------
 
 function* walkNodes(nodes: ASTNode): Generator<SingleASTNode> {
   if (!Array.isArray(nodes)) return;
@@ -73,7 +73,7 @@ async function preFetchEntities(
   const userIds = new Set<string>();
   const roleIds = new Set<string>();
   const imageEntries: Array<[string, APIAttachment, APIMessage]> = [];
-  // Users already resolved by discord.js (from message.mentions.users — no extra fetch needed)
+  // Users already resolved by discord.js (from message.mentions.users - no extra fetch needed)
   const directUsers = new Map<string, User>();
 
   for (const message of messages) {
@@ -210,7 +210,7 @@ export default async function render({ messages, channel, callbacks, ...options 
             min-height: 100vh;
           }
 
-          /* ── Scrollbar ── */
+          /* -- Scrollbar -- */
           ::-webkit-scrollbar { width: 8px; height: 8px; }
           ::-webkit-scrollbar-track { background: transparent; }
           ::-webkit-scrollbar-thumb {
@@ -222,12 +222,12 @@ export default async function render({ messages, channel, callbacks, ...options 
           }
           * { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.1) transparent; }
 
-          /* ── Page container ── */
+          /* -- Page container -- */
           discord-messages {
             font-family: 'Inter', 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
           }
 
-          /* ── Footer ── */
+          /* -- Footer -- */
           .transcript-footer {
             display: flex;
             flex-direction: column;
@@ -314,7 +314,7 @@ export default async function render({ messages, channel, callbacks, ...options 
         }}
       >
         <DiscordMessages messages={messages} channel={channel} callbacks={callbacks} resolvedEntities={resolvedEntities} {...options} />
-        {/* Profile popup — populated by profilePopup script */}
+        {/* Profile popup - populated by profilePopup script */}
         <script dangerouslySetInnerHTML={{ __html: profilePopup }} />
       </body>
 

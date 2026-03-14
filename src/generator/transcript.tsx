@@ -70,14 +70,21 @@ export default function DiscordMessages({ messages, channel, callbacks, ...optio
                 .replaceAll('{s}', messages.length > 1 ? 's' : '')
             : `${messages.length} message${messages.length > 1 ? 's' : ''} exported`}
         </div>
-        {options.poweredBy ? (
-          <div className="transcript-footer-brand">
-            Generated with{' '}
-            <a href="https://github.com/aymenelouadi/discord-html-transcripts-components-v2">
-              discord-html-transcripts-components-v2
-            </a>
-          </div>
-        ) : null}
+        <div className="transcript-footer-brand">
+          {options.poweredBy ? (
+            <>
+              Generated with{' '}
+              <a href="https://github.com/aymenelouadi/discord-transcripts-v2" target="_blank" rel="noreferrer">
+                discord-transcript-v2
+              </a>
+              {' \u2014 '}
+            </>
+          ) : null}
+          &copy; {new Date().getFullYear()}{' '}
+          <a href="https://github.com/aymenelouadi" target="_blank" rel="noreferrer">
+            Code Nexus
+          </a>
+        </div>
       </div>
     </DiscordMessagesComponent>
   );
